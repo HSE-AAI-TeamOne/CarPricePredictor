@@ -5,6 +5,11 @@ The aim of this framework is to provide a quick way to develop context aware app
 
 ## Here some of the past projects:
 
+2018<br>
+[ABC Buddy](https://www.hackster.io/dcse-team-b/abc-buddy-a54c31)<br>
+[Digital Live Tracking](https://www.hackster.io/dcse-team-c/digital-life-tracking-87e03f)<br>
+[LapOps](https://www.hackster.io/dcse-team-d/lapops-638e1e)
+
 2017<br>
 [SmartphoneReminder](https://www.hackster.io/43563/smartphone-reminder-5fb580)<br>
 [SmartCart](https://www.hackster.io/dcse-team-b/smart-cart-09155f)
