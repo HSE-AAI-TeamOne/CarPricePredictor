@@ -18,7 +18,7 @@ The aim of this framework is to provide a quick way to develop context aware app
   Capture-Sensor-Data<br>
   Find patterns<br>
   Create matcher and state-machine<br>
-  Dont find the killer App? -> Repeat<br>
+  Dont found the killer App? -> Repeat<br>
  
 
  
