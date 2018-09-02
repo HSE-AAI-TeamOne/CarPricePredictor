@@ -9,14 +9,15 @@
     >
 
 
-
     <org.opencv.android.JavaCameraView
+        android:id="@+id/jvc"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:visibility="visible"
-        android:id="@+id/jvc"
+        opencv:camera_id="any"
         opencv:show_fps="true"
-        opencv:camera_id="any" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/machineButton"
@@ -29,5 +30,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="14dp"
+        android:layout_marginTop="20dp"
+        android:max="600"
+        android:progress="300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jvc" />
 
 </android.support.constraint.ConstraintLayout>

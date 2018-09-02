@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -40,6 +42,7 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
     JavaCameraView javaCameraView;
     private Button machineVisionButton;
     private boolean something;
+    private SeekBar seekBar;
     Mat mRgba, mRgbaF, mRgbaT;
     //callback loader
     BaseLoaderCallback mCallBackLoader = new BaseLoaderCallback(this) {
@@ -63,14 +66,15 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_machine_vision);
-
+        Toast.makeText(getApplicationContext(), "Regulate the sensitivity of the line-detection using the bar above", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Simply regulate by dragging it to a direction", Toast.LENGTH_LONG).show();
         //connect the camera
         javaCameraView = findViewById(R.id.jvc);
         //set visibility
         javaCameraView.setVisibility(SurfaceView.VISIBLE);
         //set callback function
         javaCameraView.setCvCameraViewListener(this);
-
+        seekBar = findViewById(R.id.seekbar);
 
         //Buttons & Toggle Buttons
         machineVisionButton = findViewById(R.id.machineButton);
@@ -159,8 +163,8 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
             double dx = x1 - x2;
             double dy = y1 - y2;
             double dist = Math.sqrt(dx * dx + dy * dy);
-            double minLineSize = 300;
-            if(dist>minLineSize)  // show those lines that have length greater than 300
+
+            if(dist>seekBar.getProgress())  // show those lines that have length greater than 300
             Imgproc.line(mRgba, start, end, new Scalar(0, 255, 0, 255), 10);
 
 
