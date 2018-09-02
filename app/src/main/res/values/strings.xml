@@ -10,7 +10,6 @@
     <string name="mic">Microphone</string>
     <string name="gps">GPS</string>
     <string name="proximity">Proximity</string>
-
-
+    <string name="machinevision">Machine Vision</string>
 
 </resources>

@@ -18,14 +18,13 @@
 
 package edu.example.ssf.mma.timer;
 
-import java.util.Timer;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
-import edu.example.ssf.mma.userInterface.MainActivity;
+import java.util.Timer;
+
 import edu.example.ssf.mma.config.ConfigApp;
 import edu.example.ssf.mma.data.CsvFileWriter;
 import edu.example.ssf.mma.data.CurrentTickData;
@@ -36,6 +35,7 @@ import edu.example.ssf.mma.hardwareAdapter.IGyroscope;
 import edu.example.ssf.mma.hardwareAdapter.IMagneto;
 import edu.example.ssf.mma.hardwareAdapter.IMicrophone;
 import edu.example.ssf.mma.hardwareAdapter.IProximity;
+import edu.example.ssf.mma.userInterface.MainActivity;
 
 
 /**

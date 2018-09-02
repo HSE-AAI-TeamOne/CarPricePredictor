@@ -26,6 +26,7 @@ package edu.example.ssf.mma.userInterface;
  * @author D. Lagamtzis
  * @version 2.0
  */
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -46,16 +47,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-
 import edu.example.ssf.mma.R;
 import edu.example.ssf.mma.charts.AccChart;
 import edu.example.ssf.mma.config.ConfigApp;
 import edu.example.ssf.mma.data.CsvFileWriter;
 import edu.example.ssf.mma.data.CurrentTickData;
 import edu.example.ssf.mma.hardwareAdapter.HardwareFactory;
+import edu.example.ssf.mma.machinevision.MachineVision;
 import edu.example.ssf.mma.timer.StateMachineHandler;
 
 public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener{
+
+    // Used to load the 'native-lib' library on application startup.
+    static {
+        System.loadLibrary("native-lib");
+    }
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -91,10 +97,11 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActivityCompat.requestPermissions(MainActivity.this, new  String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSIONS_MULTIPLE_REQUEST);
+        ActivityCompat.requestPermissions(MainActivity.this, new  String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, PERMISSIONS_MULTIPLE_REQUEST);
 
         //UI -- Textviews init
         eventEditText = findViewById(R.id.editText);
@@ -282,7 +289,12 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 headerTextView.setText(R.string.proximity);
                 navigationBool = true;
                 onClickUI();
+            }else if (idOfNavObj == R.id.machinevision) {
+                headerTextView.setText(R.string.machinevision);
+                navigationBool = true;
+                onClickMachineVision();
             }
+
             mDrawerLayout.closeDrawer(GravityCompat.START);
             return true;
         }
@@ -379,6 +391,19 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         }
     }
+    public void onClickMachineVision(){
+        if(navigationBool) {
+            Intent intent = new Intent(this, MachineVision.class);
+            startActivity(intent);
+            // UI
+
+        } else {
+            //UI
+            headerTextView.setText(defaultMessage);
+
+
+        }
+    }
     public void onClickMicREC(){
         if(recButton.isChecked()) {
             //Thread
@@ -412,4 +437,5 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         }
     }
+
 }
