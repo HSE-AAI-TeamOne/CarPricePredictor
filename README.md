@@ -45,4 +45,4 @@ Brunel Univ. | Embedded Systems IoT Applications Prototyping 2017<br>
 [Intro](https://github.com/MrDio/Smartphone-Sensing-Framework/wiki/Execute-Example)
 
 
-This is the Master Branch for the Smartphone Sensing Framework 2.0
+### This is the Dev-Branch for the Smartphone Sensing Framework 2.1
