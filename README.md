@@ -19,10 +19,6 @@ Brunel Univ. | Embedded Systems IoT Applications Prototyping 2017<br>
 [SmartCart](https://www.hackster.io/dcse-team-b/smart-cart-09155f)
 
 
----
-
-Special Thanks to the contributers [Hagen Hellinger](https://github.com/bollefreshavocado)
-
 --
 
 ## Respected projects
