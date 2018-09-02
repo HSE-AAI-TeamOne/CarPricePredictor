@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     public static boolean mmaCallBackBool = false;
-    private boolean navigationBool = false;
+    public static boolean navigationBool = false;
     private int idOfNavObj;
 
     // Init HW-Factory
@@ -393,6 +393,11 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     }
     public void onClickMachineVision(){
         if(navigationBool) {
+            textView1.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.INVISIBLE);
+            textView4.setVisibility(View.INVISIBLE);
+            textView5.setVisibility(View.INVISIBLE);
             Intent intent = new Intent(this, MachineVision.class);
             startActivity(intent);
             // UI

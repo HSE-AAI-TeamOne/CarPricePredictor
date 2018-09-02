@@ -31,7 +31,7 @@
         android:title="Proximity" />
     <item
         android:id="@+id/machinevision"
-        android:icon="@mipmap/nav_proximity"
+        android:icon="@mipmap/nav_machinevision"
         android:title="MachineVision" />
 
 

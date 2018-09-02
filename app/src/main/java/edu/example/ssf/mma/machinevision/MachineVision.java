@@ -1,11 +1,11 @@
 package edu.example.ssf.mma.machinevision;
 
-import android.Manifest;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -24,14 +24,22 @@ import java.util.List;
 
 import edu.example.ssf.mma.R;
 import edu.example.ssf.mma.data.ImageProcessing;
+import static edu.example.ssf.mma.userInterface.MainActivity.navigationBool;
+
+/**
+ * Machine Vision Prototype Class that works with opencv
+ *
+ * @author D. Lagamtzis
+ * @version 1.0
+ */
 
 public class MachineVision extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
     //Permissions Android
 
     //java camera view
     JavaCameraView javaCameraView;
-
-
+    private Button machineVisionButton;
+    private boolean something;
     Mat mRgba, mRgbaF, mRgbaT;
     //callback loader
     BaseLoaderCallback mCallBackLoader = new BaseLoaderCallback(this) {
@@ -63,8 +71,27 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
         //set callback function
         javaCameraView.setCvCameraViewListener(this);
 
-    }
 
+        //Buttons & Toggle Buttons
+        machineVisionButton = findViewById(R.id.machineButton);
+        machineVisionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(something)
+                    something=false;
+                else{
+                    something=true;
+                }
+            }
+        });
+    }
+    @Override
+    public void onBackPressed() {
+        navigationBool = false;
+
+
+            super.onBackPressed();
+    }
     @Override
     protected void onPause() {
         super.onPause();
@@ -115,8 +142,6 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         //get each frame from camera
         mRgba = inputFrame.rgba();
-        int cols = mRgba.cols();
-        int rows = mRgba.rows();
 
         // Rotate mRgba 90 degrees
         Core.transpose(mRgba, mRgbaT);
@@ -134,7 +159,8 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
             double dx = x1 - x2;
             double dy = y1 - y2;
             double dist = Math.sqrt(dx * dx + dy * dy);
-            //if(dist>minLineSize)  // show those lines that have length greater than 300
+            double minLineSize = 300;
+            if(dist>minLineSize)  // show those lines that have length greater than 300
             Imgproc.line(mRgba, start, end, new Scalar(0, 255, 0, 255), 10);
 
 
@@ -157,14 +183,15 @@ public class MachineVision extends AppCompatActivity implements CameraBridgeView
 
         Log.d("Angle Average", avg + "");
 
-        Imgproc.putText(mRgba,
-                avg < 0 ? "L" : "R",
-                new Point(50, mRgba.height() - 50),
-                Core.FONT_HERSHEY_SIMPLEX,
-                2,
-                new Scalar(0, 255, 0),
-                10);
-
+        if(something) {
+            Imgproc.putText(mRgba,
+                    avg < 0 ? "L" : "R",
+                    new Point(50, mRgba.height() - 50),
+                    Core.FONT_HERSHEY_SIMPLEX,
+                    2,
+                    new Scalar(0, 255, 0),
+                    10);
+        }
         return mRgba;
     }
 }

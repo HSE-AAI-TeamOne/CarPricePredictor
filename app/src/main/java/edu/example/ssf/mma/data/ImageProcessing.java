@@ -1,5 +1,12 @@
 package edu.example.ssf.mma.data;
 
+/**
+ * Image Processing Class for opencv functions
+ *
+ * @author D. Lagamtzis
+ * @version 1.0
+ */
+
 import android.graphics.Bitmap;
 
 import org.opencv.android.Utils;
