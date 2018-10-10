@@ -18,6 +18,9 @@ Brunel Univ. | Embedded Systems IoT Applications Prototyping 2017<br>
 [SmartphoneReminder](https://www.hackster.io/43563/smartphone-reminder-5fb580)<br>
 [SmartCart](https://www.hackster.io/dcse-team-b/smart-cart-09155f)
 
+---
+
+Special Thanks to the contributers [Benedikt Grau](https://github.com/supercrazyking)
 
 --
 
