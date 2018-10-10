@@ -20,6 +20,7 @@ Brunel Univ. | Embedded Systems IoT Applications Prototyping 2017<br>
 ---
 
 Special Thanks to the contributers [Hagen Hellinger](https://github.com/bollefreshavocado)
+and to [Benedikt Grau](https://github.com/supercrazyking)
 
 --
 
