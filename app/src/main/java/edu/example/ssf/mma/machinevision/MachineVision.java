@@ -31,7 +31,7 @@ import static edu.example.ssf.mma.userInterface.MainActivity.navigationBool;
 /**
  * Machine Vision Prototype Class that works with opencv
  *
- * @author D. Lagamtzis
+ * @author D. Lagamtzis, B. Grau
  * @version 1.0
  */
 
