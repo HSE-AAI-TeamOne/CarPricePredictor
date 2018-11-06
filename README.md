@@ -5,6 +5,12 @@ Smartphone Sensing Framework for android smartphones developed by D. Satikidis (
 
 The aim of this framework is to provide a quick way to develop context aware apps on android in an experimetal way.
 
+
+## Here Some future Stuff as teaser for SSF 2.1 (AI Applied Lecture):
+
+University of Applied Sciences Esslingen | AI Applied 2019<br>
+[Android AI Car ](https://github.com/umadbro96/androidAICar)<br>
+
 ## Here some of the past projects:
 
 Brunel Univ. | Embedded Systems IoT Applications Prototyping 2018<br>
@@ -15,7 +21,6 @@ Brunel Univ. | Embedded Systems IoT Applications Prototyping 2018<br>
 Brunel Univ. | Embedded Systems IoT Applications Prototyping 2017<br>
 [SmartphoneReminder](https://www.hackster.io/43563/smartphone-reminder-5fb580)<br>
 [SmartCart](https://www.hackster.io/dcse-team-b/smart-cart-09155f)
-
 
 ---
 
