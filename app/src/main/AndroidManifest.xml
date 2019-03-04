@@ -41,6 +41,7 @@
         <activity android:name=".charts.AccChart"></activity>
         <activity android:name=".hardwareAdapter.GPS.gps"></activity>
         <activity android:name=".machinevision.MachineVision"></activity>
+        <activity android:name=".imagedetection.ImageDetection"></activity>
     </application>
 
 </manifest>

@@ -53,6 +53,7 @@ import edu.example.ssf.mma.config.ConfigApp;
 import edu.example.ssf.mma.data.CsvFileWriter;
 import edu.example.ssf.mma.data.CurrentTickData;
 import edu.example.ssf.mma.hardwareAdapter.HardwareFactory;
+import edu.example.ssf.mma.imagedetection.ImageDetection;
 import edu.example.ssf.mma.machinevision.MachineVision;
 import edu.example.ssf.mma.timer.StateMachineHandler;
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     private static TextView textViewActState;
     private EditText eventEditText;
     private ToggleButton recButton, mmaButton, eventButton;
-    private Button fileBrowserButton, showChartButton;
+    private Button fileBrowserButton, showChartButton, testButton;
 
     //Text View Result
     private String defaultMessage = "Please Choose your Sensor to Display!";
@@ -293,6 +294,10 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
                 headerTextView.setText(R.string.machinevision);
                 navigationBool = true;
                 onClickMachineVision();
+            }else if (idOfNavObj == R.id.imagedetection) {
+                headerTextView.setText("Image Detection");
+                navigationBool = true;
+                onClickImageDetection();
             }
 
             mDrawerLayout.closeDrawer(GravityCompat.START);
@@ -399,6 +404,24 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
             textView4.setVisibility(View.INVISIBLE);
             textView5.setVisibility(View.INVISIBLE);
             Intent intent = new Intent(this, MachineVision.class);
+            startActivity(intent);
+            // UI
+
+        } else {
+            //UI
+            headerTextView.setText(defaultMessage);
+
+
+        }
+    }
+    public void onClickImageDetection(){
+        if(navigationBool) {
+            textView1.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.INVISIBLE);
+            textView4.setVisibility(View.INVISIBLE);
+            textView5.setVisibility(View.INVISIBLE);
+            Intent intent = new Intent(MainActivity.this, ImageDetection.class);
             startActivity(intent);
             // UI
 

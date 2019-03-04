@@ -135,7 +135,7 @@ public class StateMachineHandler extends Handler{
 
 
 		if(MainActivity.mmaCallBackBool) {
-			//Log.d("getAccX", "StateMachineHandler.MainActivity.mmaCallBackBool");
+			//Log.d("getAccX", "StateMachineHandler.ImageDetection.mmaCallBackBool");
 				if(ConfigApp.isSimulation){
 					//Fetch data from acceleration sensor
 
@@ -168,7 +168,7 @@ public class StateMachineHandler extends Handler{
 
 				}
 			else {
-					//Log.d("getAccX", "StateMachineHandler.MainActivity.mmaCallBackBool");
+					//Log.d("getAccX", "StateMachineHandler.ImageDetection.mmaCallBackBool");
 					// Try with direct usage of sensor data :)
 					CsvFileWriter.writeLine(CurrentTickData.curTick.toString(),
 							CurrentTickData.curTimestamp,
@@ -192,7 +192,7 @@ public class StateMachineHandler extends Handler{
 					//Log.d("Time", CurrentTickData.curTimestamp);
 				}
 		}
-		//Log.d("getAccX", "NOT StateMachineHandler.MainActivity.mmaCallBackBool");
+		//Log.d("getAccX", "NOT StateMachineHandler.ImageDetection.mmaCallBackBool");
     	//Call daddy and say everything is ok, by forwarding received message
     	//super.handleMessage(msg);
     }

@@ -32,7 +32,11 @@
     <item
         android:id="@+id/machinevision"
         android:icon="@mipmap/nav_machinevision"
-        android:title="MachineVision" />
+        android:title="Machine Vision" />
+    <item
+        android:id="@+id/imagedetection"
+        android:icon="@mipmap/nav_imagedetection"
+        android:title="Image Detection" />
 
 
 </menu>

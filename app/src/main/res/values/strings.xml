@@ -11,6 +11,7 @@
     <string name="gps">GPS</string>
     <string name="proximity">Proximity</string>
     <string name="machinevision">Machine Vision</string>
+    <string name="imagedetection">Machine Vision</string>
     <string name="decisiontree">Show Decision</string>
 
 </resources>
