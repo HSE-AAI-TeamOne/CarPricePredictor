@@ -1,10 +1,4 @@
-# Smartphone-Sensing-Framework 2.0
-Sensing Framework for android smartphones developed by D. Satikidis (since 2012) and D. Lagamtzis (since 2017) used for academic lectures.
-
-The aim of this framework is to provide a quick way to develop context aware apps on android in an experimetal way.
-
 ## Here some of the past projects:
-
 2017<br>
 [SmartphoneReminder](https://www.hackster.io/43563/smartphone-reminder-5fb580)<br>
 [SmartCart](https://www.hackster.io/dcse-team-b/smart-cart-09155f)
@@ -34,3 +28,4 @@ The aim of this framework is to provide a quick way to develop context aware app
 
 
 This is the Branch for the DigitalLifeTracker using the Smartphone Sensing Framework 2.0
+
