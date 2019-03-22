@@ -42,14 +42,15 @@ and to [Benedikt Grau](https://github.com/supercrazyking)
  
 ## Documentation
 The following Wiki describes the architecture of the SSF. Furthermore you can learn how-to 
-create 
+create an own app on ssf.
 [Wiki](https://github.com/MrDio/Smartphone-Sensing-Framework/wiki/Systemoverview)
 
 ## Building on Android SDK
+Here you can learn how to fork the ssf and create your own branch.
 [Building](https://github.com/MrDio/Smartphone-Sensing-Framework/wiki/Building-with-Android-SDK)
 
 ## Execute Examples
-
+How to execute examples on smartphone and ADB.
 [Intro](https://github.com/MrDio/Smartphone-Sensing-Framework/wiki/Execute-Example)
 
 
