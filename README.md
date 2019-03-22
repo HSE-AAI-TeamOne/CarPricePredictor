@@ -7,12 +7,10 @@ The aim of this framework is to provide a quick way to develop context aware app
 
 
 ## Here Some future Stuff as teaser for SSF 2.1 (AI Applied Lecture):
-
 University of Applied Sciences Esslingen | AI Applied 2019<br>
 [Android AI Car ](https://github.com/umadbro96/androidAICar)<br>
 
 ## Here some of the past projects:
-
 Brunel Univ. | Embedded Systems IoT Applications Prototyping 2018<br>
 [ABC Buddy](https://www.hackster.io/dcse-team-b/abc-buddy-a54c31)<br>
 [Digital Live Tracking](https://www.hackster.io/dcse-team-c/digital-life-tracking-87e03f)<br>
@@ -43,6 +41,8 @@ and to [Benedikt Grau](https://github.com/supercrazyking)
 
  
 ## Documentation
+The following Wiki describes the architecture of the SSF. Furthermore you can learn how-to 
+create 
 [Wiki](https://github.com/MrDio/Smartphone-Sensing-Framework/wiki/Systemoverview)
 
 ## Building on Android SDK
