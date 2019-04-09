@@ -5,8 +5,11 @@ Smartphone Sensing Framework for android smartphones developed by D. Satikidis (
 
 The aim of this framework is to provide a quick way to develop context aware apps on android in an experimetal way.
 
+## SSF 2.2 Experimental TensorFlow | Applied Artificial Intelligence 2019 Lecture 
+University of Applied Sciences Esslingen | Applied AI 2019<br>
 
-## Here Some future Stuff as teaser for SSF 2.1 (AI Applied Lecture):
+
+## SSF 2.1 used with OpenCV to track lanes for autonomous driving RC Car by D. Lagamtzis:
 University of Applied Sciences Esslingen | AI Applied 2019<br>
 [Android AI Car ](https://github.com/umadbro96/androidAICar)<br>
 
