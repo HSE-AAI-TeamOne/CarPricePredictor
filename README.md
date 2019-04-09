@@ -16,6 +16,11 @@ University of Applied Sciences Esslingen | Applied AI 2019<br>
 University of Applied Sciences Esslingen | AI Applied 2019<br>
 [Android AI Car ](https://github.com/umadbro96/androidAICar)<br>
 
+
+<img src="https://github.com/umadbro96/androidAICar/blob/master/assets/video/video_sample1.mp4.gif" width="216" height="384"><img>
+
+
+
 ## Here some of the past projects:
 Brunel Univ. | Embedded Systems IoT Applications Prototyping 2018<br>
 [ABC Buddy](https://www.hackster.io/dcse-team-b/abc-buddy-a54c31)<br>
