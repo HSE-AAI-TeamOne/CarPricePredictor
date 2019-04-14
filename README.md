@@ -12,7 +12,7 @@ University of Applied Sciences Esslingen | Applied AI 2019<br>
 <img src="https://user-images.githubusercontent.com/8537307/55835812-1837cc80-5b1d-11e9-868b-edef313ecdfb.jpg" width="216" height="384"><img>
 
 
-## SSF 2.1 used with OpenCV to track lanes for autonomous driving RC Car by D. Lagamtzis:
+## SSF 2.1 used with OpenCV to track lanes for autonomous driving RC Car by D. Lagamtzis & B. Grau:
 University of Applied Sciences Esslingen | AI Applied 2019<br>
 [Android AI Car ](https://github.com/umadbro96/androidAICar)<br>
 
