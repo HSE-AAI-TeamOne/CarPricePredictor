@@ -1,0 +1,6 @@
+numpy
+tensorflow-gpu
+keras
+pillow
+sklearn
+console-progressbar
