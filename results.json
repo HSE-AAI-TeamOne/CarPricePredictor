@@ -1,0 +1,82 @@
+[
+    {
+        "label": "Bentley Mulsanne Sedan 2011",
+        "prob": "0.6392"
+    },
+    {
+        "label": "Hyundai Tucson SUV 2012",
+        "prob": "1.0"
+    },
+    {
+        "label": "Bentley Continental Supersports Conv. Convertible 2012",
+        "prob": "0.916"
+    },
+    {
+        "label": "Hyundai Veracruz SUV 2012",
+        "prob": "0.9994"
+    },
+    {
+        "label": "Audi R8 Coupe 2012",
+        "prob": "0.9979"
+    },
+    {
+        "label": "Ford E-Series Wagon Van 2012",
+        "prob": "0.9935"
+    },
+    {
+        "label": "Mercedes-Benz SL-Class Coupe 2009",
+        "prob": "0.857"
+    },
+    {
+        "label": "Hyundai Elantra Sedan 2007",
+        "prob": "0.9945"
+    },
+    {
+        "label": "Hyundai Azera Sedan 2012",
+        "prob": "1.0"
+    },
+    {
+        "label": "Acura RL Sedan 2012",
+        "prob": "0.6614"
+    },
+    {
+        "label": "BMW M6 Convertible 2010",
+        "prob": "0.8895"
+    },
+    {
+        "label": "GMC Savana Van 2012",
+        "prob": "0.9998"
+    },
+    {
+        "label": "Chevrolet Sonic Sedan 2012",
+        "prob": "0.9976"
+    },
+    {
+        "label": "Audi TTS Coupe 2012",
+        "prob": "0.6033"
+    },
+    {
+        "label": "Lincoln Town Car Sedan 2011",
+        "prob": "0.9998"
+    },
+    {
+        "label": "Dodge Caliber Wagon 2012",
+        "prob": "0.3499"
+    },
+    {
+        "label": "Toyota Sequoia SUV 2012",
+        "prob": "0.4472"
+    },
+    {
+        "label": "Ford F-450 Super Duty Crew Cab 2012",
+        "prob": "0.9993"
+    },
+    {
+        "label": "Jeep Grand Cherokee SUV 2012",
+        "prob": "0.9999"
+    },
+    {
+        "label": "Mitsubishi Lancer Sedan 2012",
+        "prob": "0.9999"
+    }
+]
