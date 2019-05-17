@@ -9,7 +9,7 @@ The aim of this project is the automatic recognition of automobiles with machine
 
 ## 2. Project Description
 
-![screenshot](https://github.com/HSE-AAI-TeamOne/CarPricePredictor/tree/master/img/website.PNG)
+![screenshot](./img/website.PNG)
 
 ### 2.1 Dependencies
 
