@@ -1,0 +1,10 @@
+WARNING 2019-05-21 09:05:24,142 - From C:\Users\David\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+INFO 2019-05-21 09:05:49,499 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO 2019-05-21 09:05:59,829 - POST methode wurde erfolgreich aufgerufen
+INFO 2019-05-21 09:05:59,831 - data_uri wurde erfolgreich in variable geladen
+INFO 2019-05-21 09:05:59,831 - make_prediction wurde aufgerufen
+INFO 2019-05-21 09:05:59,845 - wurde erfolgreich konvertiert
+INFO 2019-05-21 09:05:59,848 - image wurder erfolgreich geprocessed
+INFO 2019-05-21 09:06:03,870 - 127.0.0.1 - - [21/May/2019 09:06:03] "[37mPOST / HTTP/1.1[0m" 200 -

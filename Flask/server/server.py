@@ -6,6 +6,9 @@ from flask import Flask, request
 from flask_cors import CORS, cross_origin
 from ki_adapter import load_model, make_prediction
 
+# nur für development für spätere versionen entfernen
+import logging
+logger = logging.getLogger()
 
 # model
 model = load_model('models/custom_model.hdf5')
@@ -22,15 +25,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def root():
     global model
     global graph
-# path from js
-    path = request.form['path']
-    path = Path(path)
-    path = path.absolute().as_posix()
+    logger.info("POST methode wurde erfolgreich aufgerufen")
+    # gets the raw base64 string
+    data_uri = request.form['data_uri']
+    logger.info("data_uri wurde erfolgreich in variable geladen")
 
-    prediction = make_prediction(model, graph, path)
-
-    if os.path.exists(path):
-        os.remove(path)
+    prediction = make_prediction(model, graph, data_uri)
 
     return prediction
 

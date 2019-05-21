@@ -8,12 +8,14 @@ Webcam.set({
 Webcam.attach("#my_camera");
 
 var file_path;
+var raw_data;
 
 function take_snapshot() {
-  var data_uri;
-
   // take snapshot and get image data
   Webcam.snap(function(data_uri) {
+    // TODO dieser jpg data string base 64 an flask übergeben
+    raw_data = data_uri;
+    console.log("in func ", data_uri);
     // display results in page
     document.getElementById("results").innerHTML = '<img src="' + data_uri + '"/>';
 
@@ -36,13 +38,13 @@ function predict() {
   sleep(1000).then(() => {
     let fg = "C:/Users/David/Downloads/CarPricePredictorImage.jpg";
     if (fg) {
-      console.log(fg);
+      console.log(raw_data);
     }
     $.post(
       "http://127.0.0.1:5000/",
       {
         //   C:/Users/David/Downloads/CarPricePredictorImage.jpg
-        path: "C:/Users/David/Downloads/CarPricePredictorImage.jpg"
+        data_uri: raw_data
       },
       function(data) {
         console.log(data);
