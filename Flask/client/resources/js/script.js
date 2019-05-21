@@ -13,9 +13,8 @@ var raw_data;
 function take_snapshot() {
   // take snapshot and get image data
   Webcam.snap(function(data_uri) {
-    // TODO dieser jpg data string base 64 an flask übergeben
+    // übergabe wert wird festgelegt
     raw_data = data_uri;
-    console.log("in func ", data_uri);
     // display results in page
     document.getElementById("results").innerHTML = '<img src="' + data_uri + '"/>';
 
@@ -33,24 +32,31 @@ function showSaveButton() {
 const sleep = milliseconds => {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 };
+// gets the base 64 string and saves it
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
+    reader.onload = function(e) {
+      raw_data = e.target.result;
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+//  jquery listener on file selecter
+$("#imageInput").change(function() {
+  readURL(this);
+});
 function predict() {
-  sleep(1000).then(() => {
-    let fg = "C:/Users/David/Downloads/CarPricePredictorImage.jpg";
-    if (fg) {
-      console.log(raw_data);
+  $.post(
+    "http://127.0.0.1:5000/",
+    {
+      //delivers the data to the python backend
+      data_uri: raw_data
+    },
+    function(data) {
+      document.getElementById("carType").classList.remove("hidden");
+      document.getElementById("carType").innerHTML = "Cartype: " + data;
     }
-    $.post(
-      "http://127.0.0.1:5000/",
-      {
-        //   C:/Users/David/Downloads/CarPricePredictorImage.jpg
-        data_uri: raw_data
-      },
-      function(data) {
-        console.log(data);
-        document.getElementById("carType").classList.remove("hidden");
-        document.getElementById("carType").innerHTML = "Cartype: " + data;
-      }
-    );
-  });
+  );
 }

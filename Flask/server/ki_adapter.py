@@ -37,6 +37,7 @@ def load_model(weights_path):
 
 
 def make_prediction(model, graph, data_uri):
+    # currently only gety data_uri
     img_width, img_height = 224, 224
     logger.info("make_prediction wurde aufgerufen")
     # ruft die funktion convert auf
@@ -67,7 +68,7 @@ def make_prediction(model, graph, data_uri):
     if datarow.shape[0] > 0:
         car_price = str(datarow.iloc[0]["carPrice"]) + '$'
     else:
-        car_price = "kein preis vohanden"
+        car_price = "Kein Preis vorhanden"
 
     prob = round(prob*100, 2)
 
