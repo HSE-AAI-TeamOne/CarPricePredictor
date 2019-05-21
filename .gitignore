@@ -1,5 +1,6 @@
 #ignore the model because its bigger than 100mb filesize cap for git
 
 Flask/server/models/custom_model.hdf5
-Flask/server/logs/backend.log
+#ignore log
+Flask/server/logs/
 

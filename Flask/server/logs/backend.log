@@ -78,3 +78,21 @@ INFO 2019-05-21 14:46:13,866 - make_prediction wurde aufgerufen
 INFO 2019-05-21 14:46:13,867 - wurde erfolgreich konvertiert
 INFO 2019-05-21 14:46:13,868 - image wurder erfolgreich geprocessed
 INFO 2019-05-21 14:46:14,573 - 127.0.0.1 - - [21/May/2019 14:46:14] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO 2019-05-21 14:55:39,748 - POST methode wurde erfolgreich aufgerufen
+INFO 2019-05-21 14:55:39,753 - data_uri wurde erfolgreich in variable geladen
+INFO 2019-05-21 14:55:39,753 - make_prediction wurde aufgerufen
+INFO 2019-05-21 14:55:39,755 - wurde erfolgreich konvertiert
+INFO 2019-05-21 14:55:39,756 - image wurder erfolgreich geprocessed
+INFO 2019-05-21 14:55:40,555 - 127.0.0.1 - - [21/May/2019 14:55:40] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO 2019-05-21 15:02:42,539 - POST methode wurde erfolgreich aufgerufen
+INFO 2019-05-21 15:02:42,545 - data_uri wurde erfolgreich in variable geladen
+INFO 2019-05-21 15:02:42,545 - make_prediction wurde aufgerufen
+INFO 2019-05-21 15:02:42,548 - wurde erfolgreich konvertiert
+INFO 2019-05-21 15:02:42,548 - image wurder erfolgreich geprocessed
+INFO 2019-05-21 15:02:43,453 - 127.0.0.1 - - [21/May/2019 15:02:43] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO 2019-05-21 15:04:37,445 - POST methode wurde erfolgreich aufgerufen
+INFO 2019-05-21 15:04:38,035 - data_uri wurde erfolgreich in variable geladen
+INFO 2019-05-21 15:04:38,035 - make_prediction wurde aufgerufen
+INFO 2019-05-21 15:04:38,501 - wurde erfolgreich konvertiert
+INFO 2019-05-21 15:04:38,507 - image wurder erfolgreich geprocessed
+INFO 2019-05-21 15:04:39,620 - 127.0.0.1 - - [21/May/2019 15:04:39] "[37mPOST / HTTP/1.1[0m" 200 -
