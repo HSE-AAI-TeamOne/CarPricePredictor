@@ -1,14 +1,11 @@
 # See best practices at:
 # https://github.com/github/gitignore/blob/master/Python.gitignore
 
-# Model size > 100mb (cannot be uploaded to github)
-Flask/server/models/custom_model.hdf5
+# Models
+*.hdf5
 
 # Logs
-Flask/server/logs/
-
-# Showcase images
-img
+*.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -42,3 +39,15 @@ MANIFEST
 # Flask stuff:
 instance/
 .webassets-cache
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
