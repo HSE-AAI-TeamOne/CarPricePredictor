@@ -4,7 +4,6 @@ import tensorflow as tf
 from pathlib import Path
 
 from flask import Flask, request, render_template, url_for
-from flask_cors import CORS, cross_origin
 from ki_adapter import load_model, make_prediction
 
 # nur für development für spätere versionen entfernen
@@ -18,8 +17,6 @@ graph = tf.get_default_graph()
 
 # server
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/', methods=['GET'])
@@ -28,7 +25,6 @@ def root():
 
 
 @app.route("/predict", methods=['POST'])
-@cross_origin()
 def predict():
     global model
     global graph
