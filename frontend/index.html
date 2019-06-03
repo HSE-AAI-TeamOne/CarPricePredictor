@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/debug.css" />
   </head>
   <body>
-    <div class="bigContainer" debug>
+    <div class="bigContainer">
       <div class="header">
         <button class="menu">
           <span class="icon-bar"></span>
@@ -21,16 +21,32 @@
       </div>
       <div class="upperLeftContainer">
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus est, dolor aperiam fugit atque optio
-            provident dolore tempore nobis aliquid, delectus cum quibusdam natus perferendis facilis, architecto
-            doloribus? Ad, minima.
-          </p>
+          <ol>
+            <li>
+              Entweder du lädst ein Bild über die Upload-Funktion hoch oder du machst direkt ein Foto des zu
+              bestimmenden Autos. Für eine genaue Preisbestimmung kannst du das Baujahr und den Kilometerstand des Autos
+              zusätzlich eingeben.
+            </li>
+            <li>Was danach passiert ist „Magic“</li>
+            <li>
+              Schau dir das erkannte Automodell an und den aktuellen Wert des Autos inklusive einer Prognose für die
+              nächsten Jahre.
+            </li>
+          </ol>
         </div>
       </div>
-      <div class="upperRightContainer">upperRightContainer</div>
-      <div class="lowerLeftContainer">lowerLeftContainer</div>
-      <div class="lowerRightContainer">lowerRightContainer</div>
+      <div class="upperRightContainer">
+        <div id="webcam_wrapper">
+          <div id="webcam_preview"></div>
+          <div id="webcam_snap" class="hidden"></div>
+        </div>
+        <button id="webcam_button" onclick="enable_webcam()">Webcam aktivieren</button>
+        <input type="file" onchange="previewFile()" />
+      </div>
+      <div class="lowerLeftContainer"></div>
+      <div class="lowerRightContainer"></div>
     </div>
+    <script src="assets/js/webcam.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

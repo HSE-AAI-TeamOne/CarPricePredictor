@@ -5,9 +5,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-  height: 30em;
-  width: 100%;
-  background-color: #280f3b;
+  background-color: orange;
 }
 /* main container */
 .bigContainer {
@@ -15,7 +13,7 @@ body {
   width: 100vw;
   display: grid;
   /* header, upper, lower */
-  grid-template-rows: 6% 47% 47%;
+  grid-template-rows: 6% 60% 34%;
   /* left, right */
   grid-template-columns: 50% 50%;
 }
@@ -45,6 +43,7 @@ body {
   margin-left: 50%;
   width: auto;
 }
+/* TODO iconbar einfügen bei responsive nachgucken */
 .icon-bar {
   background-image: url(assets/images/icon-bar.png);
 }
@@ -75,4 +74,13 @@ body {
   grid-row-start: 3;
   grid-row-end: 4;
   padding: 0 10% 5% 5%;
+}
+#webcam_preview {
+  background-image: url(../images/img_placeholder.svg);
+  border: 1px black solid;
+  width: 400px;
+  height: 300px;
+}
+.hidden {
+  display: none !important;
 }
