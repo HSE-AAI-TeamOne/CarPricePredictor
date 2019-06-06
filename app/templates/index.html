@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>PRAEDIMOBILI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="shortcut icon" href="">
-</head>
+    <!-- url_for ist eine flask methode, die html funktiniert nur wenn die server.py ausgeführt wird -->
+    <!-- nächstes mal bitte eine beschreibung einfügen -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="shortcut icon" href="" />
+  </head>
 
-<body>
+  <body>
     <div id="App" class="gridContainer">
-        <!-- top Area -->
-        <div class="gridInterfaceItem1">
-            <div class="heading">
-                <h1>Praedimobili CarPricePredictor</h1>
-            </div>
-            <img class="logo" alt="Logo" src="{{ url_for('static', filename='img/logo.jpg') }}" />
+      <!-- top Area -->
+      <div class="gridInterfaceItem1">
+        <div class="heading">
+          <h1>Praedimobili CarPricePredictor</h1>
         </div>
+        <img class="logo" alt="Logo" src="{{ url_for('static', filename='img/logo.jpg') }}" />
+      </div>
 
-        <!-- mid Area -->
-        <div class="gridInterfaceItem2">
-            <hr />
-            <div id="media">
-                <div id="my_camera"></div>
-                <div class="hidden" id="results"></div>
-            </div>
-            <input type="button" class="button" id="snapButton" value="Foto aufnehmen" onclick="take_snapshot(); showSaveButton()" />
-            <a class="hidden button" id="saveButton" download="CarPricePredictorImage.jpg" , onclick="predict()">Foto herunterladen</a
+      <!-- mid Area -->
+      <div class="gridInterfaceItem2">
+        <hr />
+        <div id="media">
+          <div id="my_camera"></div>
+          <div class="hidden" id="results"></div>
+        </div>
+        <input
+          type="button"
+          class="button"
+          id="snapButton"
+          value="Foto aufnehmen"
+          onclick="take_snapshot(); showSaveButton()"
+        />
+        <a class="hidden button" id="saveButton" download="CarPricePredictorImage.jpg" , onclick="predict()"
+          >Foto herunterladen</a
         >
         <input type="file" id="imageInput" />
         <button onclick="predict()">predict</button>
