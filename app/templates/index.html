@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PRAEDIMOBILI</title>
-    <!-- url_for ist eine flask methode, die html funktiniert nur wenn die server.py ausgeführt wird -->
+    <title>CarPrizePredictor | Praedimobili</title>
+    <!-- url_for ist eine flask methode, die html funktioniert nur wenn die server.py ausgeführt wird -->
     <!-- nächstes mal bitte eine beschreibung einfügen -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
     <link rel="shortcut icon" href="" />
   </head>
 
@@ -13,14 +16,45 @@
       <!-- top Area -->
       <div class="gridInterfaceItem1">
         <div class="heading">
-          <h1>Praedimobili CarPricePredictor</h1>
+          <h1>CarPricePredictor</h1>
         </div>
-        <img class="logo" alt="Logo" src="{{ url_for('static', filename='img/logo.jpg') }}" />
+        <img
+          class="logo"
+          alt="Logo"
+          src="{{ url_for('static', filename='img/logo.jpg') }}"
+        />
       </div>
 
-      <!-- mid Area -->
-      <div class="gridInterfaceItem2">
-        <hr />
+      <div class="headerDivider"></div>
+
+      <!-- explanation Area -->
+      <div class="upperLeftContainer">
+        <div>
+          <ol>
+            <li>
+              <p>
+                Entweder du lädst ein Bild über die
+                <font color="#FF652F">Upload</font>-Funktion hoch oder du machst
+                direkt ein Foto des zu bestimmenden Autos
+              </p>
+            </li>
+            <br />
+            <li>
+              <p>Was danach passiert ist <font color="#FF652F">Magic</font></p>
+            </li>
+            <br />
+            <li>
+              Schau dir das erkannte <font color="#FF652F">Automodell</font> an
+              inklusive seines geschätzten
+              <font color="#FF652F">Werts</font> mit einer Prognose für die
+              nächsten Jahre
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- snapshot Area -->
+      <div class="upperRightContainer">
         <div id="media">
           <div id="my_camera"></div>
           <div class="hidden" id="results"></div>
@@ -32,27 +66,51 @@
           value="Foto aufnehmen"
           onclick="take_snapshot(); showSaveButton()"
         />
-        <a class="hidden button" id="saveButton" download="CarPricePredictorImage.jpg" , onclick="predict()"
+        <a
+          class="hidden button"
+          id="saveButton"
+          download="CarPricePredictorImage.jpg"
+          ,
+          onclick="predict()"
           >Foto herunterladen</a
         >
         <input type="file" id="imageInput" />
-        <button onclick="predict()">predict</button>
+        <label for="imageInput" class="btn-1">Foto hochladen</label>
+
+        <button id="predictButton" onclick="predict()">predict</button>
       </div>
 
-      <!-- bottom Area -->
-      <div class="gridInterfaceItem3">
-        <hr />
+      <!-- Output Area -->
+      <div class="lowerLeftContainer">
         <div id="output">
           <div id="carType"></div>
           <br />
           <div id="carPrice"></div>
         </div>
       </div>
+
+      <!-- Output Area 2 -->
+      <div class="lowerRightContainer">
+        <img
+          class="fahrzeugwertImg"
+          alt="Fahrzzeugwert"
+          src="{{ url_for('static', filename='img/fahrzeugwert.png') }}"
+        />
+      </div>
     </div>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/webcam.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.0.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/webcam.min.js') }}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/jquery-3.4.0.min.js') }}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
   </body>
 </html>

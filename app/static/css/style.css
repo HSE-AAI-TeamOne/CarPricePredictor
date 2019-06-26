@@ -1,118 +1,262 @@
 /*   Allgemeines    */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: lightgrey;
+:root {
+  --primaryColor: #ff652f;
+  /*--secondaryColor: #747474;*/
+  --secondaryColor: #8f8f8f;
+
+  --backGroundColor: #272727;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--backGroundColor);
 }
 
 .gridContainer {
-    float: left;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(570px, 40%);
-    grid-template-rows: 10% 75% 15%;
-    justify-content: center;
+  float: left;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 7% 3px 55% 37%;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
 }
-
 .gridInterfaceItem1 {
-    background-color: white;
+  /* heading */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: var(--backGroundColor);
 }
 
-.gridInterfaceItem2 {
-    background-color: white;
+.headerDivider {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: var(--primaryColor);
 }
 
-.gridInterfaceItem3 {
-    background-color: white;
+.upperLeftContainer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 5% 5% 0 10%;
 }
 
+.upperRightContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 5% 10% 0 5%;
+  background-color: var(--backGroundColor);
+}
+
+.lowerLeftContainer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 0 5% 5% 10%;
+  background-color: var(--backGroundColor);
+}
+
+.lowerRightContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 0 10% 5% 5%;
+}
 /*   Fonts    */
 
 html {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: var(--secondaryColor);
 }
 
 /*   Spezifische Styles    */
 
 #my_camera {
-    border: 1px solid black;
+  border: 1px solid var(--primaryColor);
+  background-image: url(../images/img_placeholder.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo {
-    height: 66px;
-    width: 101px;
-    float: right;
+  height: 66px;
+  width: 101px;
+  float: right;
+  /*transform: rotate(270deg);*/
 }
 
-.gridInterfaceItem1>.heading {
-    width: 80%;
-    float: left;
-    margin-left: 10px;
+.gridInterfaceItem1 > .heading {
+  font-weight: 300;
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  font-size: calc(10px+1vh);
+  width: fit-content;
+  width: -moz-fit-content;
+  transform: translate(-50%);
 }
 
-.gridInterfaceItem1>.logo {
-    padding-top: 10px;
-    padding-right: 10px;
+.gridInterfaceItem1 > .logo {
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
-#media {
-    display: grid;
-    justify-content: center;
-    width: 500px;
-    margin: auto;
+div > ol > li {
+  font-size: 20px;
 }
 
-#media>div>img {
-    border: 1px solid black;
+#carType {
+  font-size: 20px;
+  color: var(--primaryColor);
+}
+
+#carPrice {
+  font-size: 20px;
+  color: var(--primaryColor);
+}
+
+#media > div > img {
+  border: 1px solid var(--secondaryColor);
 }
 
 .button {
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: var(--primaryColor);
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#predictButton {
+  background-color: var(--primaryColor);
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 #snapButton {
-    margin-top: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #saveButton {
-    margin-top: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 171px;
-    height: 35px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 171px;
+  height: 35px;
+  color: black;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 #output {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background-color: var(--primaryColor);
+  border: none;
+  color: black;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 4px;
+  margin-left: 4px;
+
+  cursor: pointer;
+}
+
+.fahrzeugwertImg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Responsivität */
+@media (max-width: 1166px) {
+    .gridContainer {
+        float: left;
+        display: grid;
+        grid-template-rows: 7vh 1vh 40vh 50vh 30vh 50vh;
+        grid-template-columns: 100%;
+        justify-content: center;
+      }
+      
+    .upperLeftContainer {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      padding: 3% 3% 3% 3%; /* top, right, bottom, left */
+    }
+
+    .upperRightContainer {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      padding: 3% 3% 3% 3%; /* top, right, bottom, left */
+    }
+
+    .lowerLeftContainer {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      padding: 3% 3% 3% 3%; /* top, right, bottom, left */
+    }
+
+    .lowerRightContainer {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 6;
+      grid-row-end: 7;
+      padding: 3% 3% 3% 3%; /* top, right, bottom, left */
+    }
 }
