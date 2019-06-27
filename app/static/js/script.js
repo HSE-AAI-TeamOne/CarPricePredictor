@@ -39,6 +39,17 @@ function readURL(input) {
 
     reader.onload = function(e) {
       raw_data = e.target.result;
+      
+      var someimage = document.getElementById('results');
+    var myimg = someimage.getElementsByTagName('img')[0];
+    var mysrc = myimg.src;  
+    console.log(myimg)
+    console.log(mysrc)
+    myimg.setAttribute('src', raw_data);
+    myimg.setAttribute('width', 502);
+    myimg.setAttribute('height', 377);
+    console.log(myimg)
+    console.log(mysrc)
     };
     reader.readAsDataURL(input.files[0]);
   }
